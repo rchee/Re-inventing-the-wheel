@@ -27,16 +27,18 @@
 				maxIndex: 300,
 				css: {
 					/*最外层容器的css*/
+					height: '100%',
 					'position': 'relative'
 				},
 				imgUlCss: {
 					/*列表容器的css*/
+					height: '100%',
 					position: 'relative',
 					padding: 0
 				},
 				imgCss: {
 					/*单个图片的css*/
-					height: '200px',
+					height: '100%',
 					width: '100%',
 					position: 'absolute',
 					'background-size': 'cover',
