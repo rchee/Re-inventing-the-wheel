@@ -9,9 +9,10 @@
 			jqo = $(this),
 			defults = {
 				width: '400px',
-				top: '100px',
+				top: '0px',
 				'z-index': 900,
-
+				showTime: 150,
+				hideTime: 150,
 				contentCss: {
 					margin: '0 auto'
 				},
@@ -49,14 +50,14 @@
 
 
 		backgroundDiv.showModal = function() {
-			backgroundDiv.fadeIn(150);
 			//修饰body
 			$('body').css('overflow', 'hidden');
+			backgroundDiv.fadeIn(settings.showTime);
 		};
 		backgroundDiv.hideModal = function() {
-			backgroundDiv.fadeOut(150);
 			//移除对body的修饰
 			$('body').css('overflow', 'auto');
+			backgroundDiv.fadeOut(settings.hideTime);
 		};
 
 
