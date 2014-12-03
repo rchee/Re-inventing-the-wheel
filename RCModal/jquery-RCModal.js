@@ -33,7 +33,7 @@
 					position: 'relative'
 				}
 			},
-			settings = $.extend(true, defults, options),
+			settings = $.extend(true, {}, defults, options),
 			backgroundDiv, scrollDiv;
 		//设置样式
 		jqo.css('width', settings.width);
@@ -68,6 +68,7 @@
 			e.stopPropagation();
 		});
 
+		$('.close', jqo).click(backgroundDiv.hideModal);
 
 		return backgroundDiv;
 	}
