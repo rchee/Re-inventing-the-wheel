@@ -38,8 +38,7 @@
 		//设置样式
 		jqo.css('width', settings.width);
 		jqo.css(settings.contentCss);
-		jqo.css('margin-top', settings.top);
-		jqo.css('margin-bottom', settings.top);
+		jqo.css('top', settings.top);
 
 		//包装
 		scrollDiv = jqo.wrap('<div class="RCModal"/>').parent().css(settings.scrollCss);
