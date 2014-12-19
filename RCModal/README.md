@@ -8,7 +8,8 @@ RCModal 模态框插件
 
 ###初始化
 将一个标签设置为弹窗
-	var myModale = $(".modale").RCModal({/*settings here*/});
+
+    var myModale = $(".modale").RCModal({/*settings here*/});
 
 ###显示弹窗
 	myModale.showModale();
