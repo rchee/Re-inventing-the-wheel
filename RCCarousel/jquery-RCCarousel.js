@@ -42,7 +42,8 @@
 					width: '100%',
 					position: 'absolute',
 					'background-size': 'cover',
-					'background-position': '50% 50%'
+					'background-position': '50% 50%',
+					'background-repeat': 'no-repeat'
 				},
 				imgLiCss: { /*图片容器的css*/
 					position: 'absolute',
@@ -76,7 +77,7 @@
 		$(this).css(settings.css);
 
 		//对图片ul进行装饰
-		imgUl = $('ul', this).addClass("RCCarousel-ul");
+		imgUl = $('ul:first', this).addClass("RCCarousel-ul");
 		imgUl.css(settings.imgUlCss);
 
 		//对图片li进行装饰
@@ -91,8 +92,8 @@
 		});
 
 		//对图片li的内容进行处理
-		$("li img", imgUl).each(function() {
-			var thisJqo = $(this),
+		$("li", imgUl).each(function() {
+			var thisJqo = $("img:first", this),
 				imgUrl = thisJqo.attr("src"),
 				parent = thisJqo.parent(),
 				newDiv = $("<div></div>");
@@ -210,6 +211,12 @@
 			nextNum = (currNum - 1) % length;
 			onEnterFarme();
 		};
+
+		this.turnTo = function(index) {
+			nextNum = index % length;
+			onEnterFarme();
+		}
+		return this;
 	};
 
 })(jQuery)
