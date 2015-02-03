@@ -31,7 +31,9 @@
 					overflow: 'auto',
 					height: '100%',
 					position: 'relative'
-				}
+				},
+				onClose: undefined,
+				onOk: undefined 
 			},
 			settings = $.extend(true, {}, defults, options),
 			backgroundDiv, scrollDiv;
@@ -67,7 +69,18 @@
 			e.stopPropagation();
 		});
 
-		$('.close', jqo).click(backgroundDiv.hideModal);
+		$('.close', jqo).click(function() {
+			if (settings.onClose) {
+				settings.onClose();
+			}
+			backgroundDiv.hideModal();
+		});
+		$('.ok', jqo).click(function() {
+			if (settings.onOk) {
+				settings.onOk();
+			}
+			backgroundDiv.hideModal();
+		});
 
 		return backgroundDiv;
 	}
