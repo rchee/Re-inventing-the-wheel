@@ -213,7 +213,7 @@
 		};
 
 		this.turnTo = function(index) {
-			nextNum = index % length;
+			nextNum = (length + index) % length;
 			onEnterFarme();
 		}
 		return this;
