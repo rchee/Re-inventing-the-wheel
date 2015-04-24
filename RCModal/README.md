@@ -18,7 +18,9 @@ RCModal 模态框插件
 	myModale.hideModal();
 
 ##弹窗的原理
-插件会自动对弹窗做包裹处理，在外侧增加两层 div。 外层用于遮罩，内层用于产生滚动条
+插件会自动对弹窗做包裹处理，在外侧增加两层 div。 外层用于遮罩，内层用于产生滚动条。
+
+		
 		<!--包裹前-->
 		<div class="modal" style="display: none;"> 
 		</div>
