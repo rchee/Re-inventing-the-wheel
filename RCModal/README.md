@@ -9,7 +9,7 @@ RCModal 模态框插件
 ###初始化
 将一个标签设置为弹窗
 
-    var myModale = $(".modale").RCModal({/*settings here*/});
+    var myModale = $(".modal").RCModal({/*settings here*/});
 
 ###显示弹窗
 	myModale.showModal();
@@ -17,8 +17,21 @@ RCModal 模态框插件
 ###隐藏弹窗
 	myModale.hideModal();
 
-##设置说明
+##弹窗的原理
+插件会自动对弹窗做包裹处理，在外侧增加两层 div。 外层用于遮罩，内层用于产生滚动条
+		<!--包裹前-->
+		<div class="modal" style="display: none;"> 
+		</div>
+		
+		<!--包裹后-->
+		<div class="RCModal" style="">
+			<div class="RCModal" style="">
+				<div class="modal" style="">
+				</div>
+			</div>
+		</div>
 
+##设置说明
 			{
 				width: '400px',		//弹窗的宽度
 				top: '0px',			//弹窗距离屏幕顶部的高度
@@ -29,16 +42,9 @@ RCModal 模态框插件
 					margin: '0 auto'//对弹窗内部设置css
 				},
 				backgroundCss: {	
-					/**对弹窗背景设置的css**/
-					display: 'none',
-					position: 'fixed',
-					top: 0,
-					left: 0,
-					width: '100%',
-					height: '100%',
+					/**对弹窗后面的黑色遮罩层设置的css。 **/
 					'z-index': 1000,
-					'background-color': '#000000',
-					'zoom': 1
+					'background-color': '#000000',//这里可以使用rgba(0,0,0,.7)或使用图片达到半透明的效果
 				},
 				scrollCss: {
 					/**对弹窗的滚动区域做的css**/
