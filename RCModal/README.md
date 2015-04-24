@@ -12,10 +12,10 @@ RCModal 模态框插件
     var myModale = $(".modale").RCModal({/*settings here*/});
 
 ###显示弹窗
-	myModale.showModale();
+	myModale.showModal();
 
 ###隐藏弹窗
-	myModale.hideModale();
+	myModale.hideModal();
 
 ##设置说明
 
@@ -47,3 +47,7 @@ RCModal 模态框插件
 					position: 'relative'
 				}
 			}
+			
+
+##兼容性
+IE7+、FireFox、Chrome、Safari

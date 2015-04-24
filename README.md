@@ -5,3 +5,7 @@ Re-inventing-the-wheel
 
 * [RCCarousel 轮播插件](/RCCarousel/)
 * [RCModal 模态框插件](/RCModal/)
+
+##License
+
+MIT License.
